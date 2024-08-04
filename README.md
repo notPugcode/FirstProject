@@ -21,5 +21,8 @@ Final steps--
 Connect the created users with email, start the code connection to JS, HTML, CSS so this can be hosted on a website.
 
 Notes to self:
-    I wonder how my program can be implemented without everything being static, and instead of calling the class to access methods.. I wonder if it's more
-    efficient to create objects of the class and use the methods that way...
+    I wonder how my program can be implemented without everything being static, and instead of calling the class to access methods.. I wonder if it's more efficient to create objects of the class and use the methods that way...
+
+    I want to also create global variables for everything that is possible, should these variables be part of the constructor?
+        For example like the variables holding the file path to the .txt files
+        I also want my methods to be as universal as possible..

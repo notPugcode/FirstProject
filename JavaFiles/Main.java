@@ -7,6 +7,16 @@ public class Main {
         //System.out.println(UserList.getArrayList());
         //System.out.println(UserList.TheList);
         //UserList.getArrayList(UserList.TheList);
+            /*public static String[] getArrayList(ArrayList<String> list) {
+        //This method is supposed to return my ArrayList 'TheList' and all its contents
+        String[] temp = new String[list.size()];
+        return list.toArray(temp);
+
+        //for (int i = 0; i < TheList.size(); i++) {
+            //System.out.println(TheList.get(i) + " ");
+            //FIGURE THIS OUT!!!!!!!
+        //}
+    }*/
 
         Scanner scanner = new Scanner(System.in);
         File linkFolder = new File("/Users/sonmigy/GenProjects/FirstProject/TextFiles/Links.txt");
@@ -39,7 +49,7 @@ public class Main {
                 System.out.println("Welcome, " + cUsr +"!");
                 createU = false;
             }else
-                System.out.println("Invalid user or password entered\nPlease try again:");
+                System.out.println("Invalid user or password entered\nPlease try again");
             }
             else if(Options.optionB(input)) {
             System.out.println("Hello returning user..." +
@@ -47,11 +57,11 @@ public class Main {
             String usr = scanner.nextLine();
             System.out.println("Please enter your password:");
             String psw = scanner.nextLine();
-            if (UserList.login(usr, psw, "/Users/sonmigy/GenProjects/FirstProject/TextFiles/UsersPass.txt", dLim)) {
+            if (UserList.login("Login", usr, psw, "/Users/sonmigy/GenProjects/FirstProject/TextFiles/UsersPass.txt", dLim)) {
                 System.out.println("Welcome back, " + usr + "!");
                 createU = false;
             } else
-                System.out.println("Sorry, those credentials are not in our system!\nPlease try again");
+                System.out.println("Sorry, those set of credentials are not in our system!\nPlease try again");
         }
         else
             System.out.println("Error");
