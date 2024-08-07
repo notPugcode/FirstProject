@@ -25,4 +25,16 @@ Notes to self:
 
     I want to also create global variables for everything that is possible, should these variables be part of the constructor?
         For example like the variables holding the file path to the .txt files
-        I also want my methods to be as universal as possible..
+        I also want my methods to be as universal as possible..    
+
+Update:
+    -I have cleaned up the while loops and some methods, but will continue to clean up code the more I learn.
+    -I have realized that the ArrayList I was using to store the Username and Password String objects was only a temp array that gets created when the
+    method it is related to gets called. This array doesn't save anything and I tested it out in my Intellij project file. So there is no need to add 
+    a method to check on the set of objects since there is nothing being saved in the array.
+    -I have added to an already exiting method, the way to check if a username is already taken.
+    -I have added Thread.sleep() to slow down the output in terminal..
+
+I have spent enough time with this project at this stage and will now move foward to the website aspect of it... though I will be focused on this aspect
+of structuring what I have to a website (HTML,CSS, Javascript) as I do this I will continue to learn and add fundamentals to what I already have.
+Will keep updating on anything new..

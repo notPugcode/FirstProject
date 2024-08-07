@@ -2,21 +2,7 @@ import java.io.*;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-
-        //System.out.println(UserList.getArrayList());
-        //System.out.println(UserList.TheList);
-        //UserList.getArrayList(UserList.TheList);
-            /*public static String[] getArrayList(ArrayList<String> list) {
-        //This method is supposed to return my ArrayList 'TheList' and all its contents
-        String[] temp = new String[list.size()];
-        return list.toArray(temp);
-
-        //for (int i = 0; i < TheList.size(); i++) {
-            //System.out.println(TheList.get(i) + " ");
-            //FIGURE THIS OUT!!!!!!!
-        //}
-    }*/
+    public static void main(String[] args) throws IOException, InterruptedException {
 
         Scanner scanner = new Scanner(System.in);
         File linkFolder = new File("/Users/sonmigy/GenProjects/FirstProject/TextFiles/Links.txt");
@@ -35,7 +21,7 @@ public class Main {
         while(createU){
         System.out.println("New users click the -[A] key\nReturning users click the -[B] key");
         String input = scanner.nextLine();
-        if(Options.optionA(input)) {
+        if (Options.optionA(input)) {
             System.out.println("""
                     Create your username below:
                     [Max 10 Characters & No numbers]""");
@@ -51,7 +37,7 @@ public class Main {
             }else
                 System.out.println("Invalid user or password entered\nPlease try again");
             }
-            else if(Options.optionB(input)) {
+            else if (Options.optionB(input)) {
             System.out.println("Hello returning user..." +
                     "\nPlease enter your username:");
             String usr = scanner.nextLine();
@@ -87,6 +73,9 @@ public class Main {
             if (TestURL.isValid(vidLink)) {
                 System.out.println("Link is valid and will be saved");
                 System.out.println(">>>SAVING");
+
+                Thread.sleep(5000);
+
                 try {
                     BufferedWriter buffW = new BufferedWriter(new FileWriter(linkFolder, true));
                     buffW.append(vidLink);

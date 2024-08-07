@@ -7,17 +7,19 @@ import java.util.ArrayList;
 
 public class UserList {
 
+    // Add EXPLANATION TO THIS METHOD.. (tempARRAY!) change to reg array?
+
     public static void user_list(String usrL, String pswL) throws IOException {
 
         FileWriter toList = new FileWriter("/Users/sonmigy/GenProjects/FirstProject/TextFiles/UsersPass.txt",true);
 
-        ArrayList<String> TheList = new ArrayList<>();
+        ArrayList<String> tempList = new ArrayList<>();
 
-        TheList.add(usrL);
-        TheList.add("-");
-        TheList.add(pswL+"\n");
+        tempList.add(usrL);
+        tempList.add("-");
+        tempList.add(pswL+"\n");
 
-        for(String i: TheList){
+        for(String i: tempList){
             toList.write(i);
         }
         toList.close();
@@ -41,25 +43,25 @@ public class UserList {
             FileReader readCred = new FileReader(filepath);
             BufferedReader br = new BufferedReader(readCred);
 
-            if(useFor.equals("Condition")){
+            if (useFor.equals("Condition")){
                 while((current = br.readLine()) != null) {
                     data = current.split(delimiter);
                 for(int i = 0; i < data.length; i++){
-                    if(data[i].equals(user)){
+                    if (data[i].equals(user)){
                         System.out.println("HINT: This username is taken!");
                         return true;
                     }
                 }
             }
         }
-            else if(useFor.equals("Login")){
+            else if (useFor.equals("Login")){
                 while((current = br.readLine()) != null) {
                     data = current.split(delimiter);
                     for (int i = 0; i < data.length; i++) {
                         if (data[i].equals(user) && data[1].equals(password)) {
                             return true;
                         }
-                        else if(data[i].equals(user) && (!data[1].equals(password))){
+                        else if (data[i].equals(user) && (!data[1].equals(password))){
                             System.out.println("HINT: Incorrect password!");
                             return false;
                         }
