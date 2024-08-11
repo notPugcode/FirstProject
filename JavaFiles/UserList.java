@@ -49,6 +49,7 @@ public class UserList {
                 for(int i = 0; i < data.length; i++){
                     if (data[i].equals(user)){
                         System.out.println("HINT: This username is taken!");
+                        br.close();
                         return true;
                     }
                 }
@@ -59,15 +60,18 @@ public class UserList {
                     data = current.split(delimiter);
                     for (int i = 0; i < data.length; i++) {
                         if (data[i].equals(user) && data[1].equals(password)) {
+                            br.close();
                             return true;
                         }
                         else if (data[i].equals(user) && (!data[1].equals(password))){
                             System.out.println("HINT: Incorrect password!");
+                            br.close();
                             return false;
                         }
                     }
                 }
             }
+            br.close();
         }
         catch (Exception e) {
             System.out.println(e);
