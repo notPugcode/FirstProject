@@ -38,3 +38,5 @@ Update:
 I have spent enough time with this project at this stage and will now move foward to the website aspect of it... though I will be focused on this aspect
 of structuring what I have to a website (HTML,CSS, Javascript) as I do this I will continue to learn and add fundamentals to what I already have.
 Will keep updating on anything new..
+
+I will try to see if I can host this project on github.io for free as a personal website.
