@@ -1,6 +1,36 @@
 h1{
     color: rgb(255, 0, 106);
 }
+h2.main{
+    position: initial;
+    width: 100%;
+
+}
 body{
     background-color: rgb(232, 185, 185);
+}
+img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 100px;
+    float: left;
+    margin-right: 20px;
+}
+p.username{
+    font-weight: bold;
+}
+em{
+    color: palevioletred;
+    font-weight: bold;
+    font-size: large;
+    font-style: normal;
+
+}
+button{
+    background-color: rgb(56, 55, 55);
+    color: rgb(178, 178, 234);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
 }
